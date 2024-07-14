@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <style>
+        body{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtWRklLO8KqbWTSY0_Zf_2j5yRy7pEAu1DcA&s');
+        }
+        .img-dice{
+            height: 300px;
+           
+        }
+        .product-card{
+        width: 300px;
+        height: 400px;
+        border: 1px solid black;
+        margin:10px auto;
+        border-radius: 10px;
+        background-color: rgb(133, 131, 132);
+    }
+    .btn-roll{
+        display: block;
+        margin: 10px auto;
+        font-size: 20px;
+        padding: 5px 20px;
+        border-radius: 15px;
+        border: 1px solid black;
+        cursor: pointer;
+
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="product-card">
+        <img src="casino.png" class="img-dice" id="img-dice"/>
+
+        <button  class="btn-roll" onclick="roll()">Roll</button>
+        </div>
+        </div>
+        <script>
+            function roll(){
+                const randomNumber = Math.floor(Math.random()*(7-1))+ 1
+                const imgElement = document.getElementById("img-dice")
+
+                switch(randomNumber){
+                    case 1:
+                        imgElement.src = "dice (1).png"
+                        break
+                    case 2:
+                        imgElement.src = "dice (2).png"
+                        break
+                    case 3:
+                        imgElement.src = "dice (3).png"
+                        break
+                    case 4:
+                        imgElement.src = "dice (4).png"
+                        break
+                    case 5:
+                        imgElement.src = "dice (5).png"
+                        break
+                    case 6:
+                        imgElement.src = "dice (6).png"
+                        break
+                           
+                           
+                }
+            }
+        </script>
+</body>
+</html>
